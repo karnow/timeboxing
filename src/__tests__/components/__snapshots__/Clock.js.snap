@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Clock /> when given minutes and secounds (TestRenderer) renders prpperly 1`] = `
+<h2
+  className="clock "
+>
+  Pozostało 
+  <span
+    className="clock__minutes clock--italic"
+  >
+    10
+  </span>
+  <span
+    className="clock__dwukropek"
+  >
+    :
+  </span>
+  <span
+    className="clock__secunds clock--italic"
+  >
+    20
+  </span>
+</h2>
+`;

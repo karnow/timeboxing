@@ -1,0 +1,105 @@
+
+.App {
+    font-family: sans-serif;
+}
+
+.Timebox {
+    border:$border;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.TimeboxEditor, .TimeboxCreator{
+    text-align: right;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+input {
+    min-width: 60%;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+button{
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 30%;
+}
+
+.CurrentTimebox {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.clock {
+    color: orangered;
+
+    &__minutes {
+        font-size: 18px;
+        color: purple;
+    }
+    &__dwukropek {
+        font-size: 18px;
+        color: grey;
+    }
+    &__secunds {
+        font-size: 18px;
+        color: yellowgreen;
+    }
+    &--italic {
+        font-style: italic;
+    }
+}
+
+
+.progress {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 25px;
+    margin-bottom: 20px;
+    padding: 5px;
+
+    &--big {
+        height: 50px;
+    }
+    
+    &--color-red {
+        border-color: orangered;
+    }
+    &--color-blue {
+        border-color: blue;
+    }
+    &--color-green {
+        border-color: green;
+    }
+    
+    &__bar {
+        height: 100%;
+        background-color: black;
+    }
+    
+    &--color-red &__bar {
+        background-color: orangered;
+    }
+}
+
+
+
+.TimeboxCreator {
+    background-color:lighten($color: aqua, $amount: 40) ;
+}
+.TimeboxEditor {
+    background-color:darken($color: aquamarine, $amount: 50);
+}
+.Timebox {
+    background-color: #ffaaaa;
+}
+.CurrentTimebox {
+    background-color: #ffffaa;
+}
