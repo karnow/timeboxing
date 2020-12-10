@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "email": "karol-nowakowski@o2.pl",
+      "password": "$2a$10$Llc3TeqqqSu.EBNDreulne/bb0cpAC7vXCFQYYXlTRg1VNdfTUlHa",
+      "id": 1
+    },
+    {
+      "email": "bob@example.com",
+      "password": "$2a$10$x65h6XecfmfcWNE13ihw.uZGxWjVtXnusG/dtxJpfJZR9kY61R7nW",
+      "id": 2
+    },
+    {
+      "email": "mietek@example.com",
+      "password": "$2a$10$/jtagg0/ZFYWi80XiQBEb.e7CMYdqtmT7KeJnoALbD7iP8uUfK2Yy",
+      "id": 3
+    }
+  ],
+  "timeboxes": [
+    {
+      "id": "1",
+      "title": "uczę się o promises",
+      "totalTimeInMinutes": 25
+    },
+    {
+      "id": "2",
+      "title": "Poznaje REST API",
+      "totalTimeInMinutes": 15
+    },
+    {
+      "id": "3",
+      "title": "Ćwiczę async/await",
+      "totalTimeInMinutes": 5
+    },
+    {
+      "id": "4",
+      "title": "Uczę się fetch",
+      "totalTimeInMinutes": 5
+    },
+    {
+      "title": "Ucze sie postmana",
+      "totalTimeInMinutes": "30",
+      "id": "paCJZoK"
+    }
+  ]
+}

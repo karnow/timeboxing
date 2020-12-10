@@ -1,29 +1,33 @@
 import React from 'react'; 
-import v4 from 'uuid/dist/esm-node/v4.js'; 
+// import v4 from 'uuid/dist/esm-node/v4.js'; 
 
 
-//Formularz za pomocą form.elements
+// Formularz za pomocą form.elements
 // class TimeboxCreator extends React.Component {
 
    
 // handleSubmit =(event) => {
-//                             event.preventDefault(); 
-//                             this.props.onCreate({ id: uuid.v4() , title:form.elements[0].value , totalTimeInMinutes:form.elements[1].value});
-//                             console.log(form.elements[0]);
-//                             form.elements[0].value="";
-//                             form.elements[1].value="";
+//                             event.preventDefault();
+//                             // alert(`${this.numberInput.value}, ${this.textInput.value}`);
+//                             alert(this.form.elements[1].value);
+//                             // this.props.onCreate({ title: this.textInput.value, totalTimeInMinutes:this.numberInput.value});
+//                             this.props.onCreate({ title: this.form.elements[0].value, totalTimeInMinutes:this.form.elements[1].value});
+                            
 // }
 
 // render () {
-// return ( <form onSubmit={this.handleSubmit} className="TimeboxCreator" id="form">
+// return ( <form ref={form =>this.form = form}onSubmit={this.handleSubmit} className="TimeboxCreator" id="form">
             
-//          <label>Co robisz? <input type="text" /></label><br />
-//         <label>Ile minut? <input type="number" /></label><br />
+//          <label>Co robisz? <input ref={input=>this.textInput = input} type="text" /></label><br />
+//         <label>Ile minut? <input ref={input=>this.numberInput = input} type="number" /></label><br />
 //         <button>Dodaj TimeBox</button>
 //     </form>
 //     )}
 // }
 
+
+
+/////////////////////////////////////////////////////////////////////
 
 //  //Formularz niekontrolowany przez Reacta
 // class TimeboxCreator extends React.Component {
@@ -69,12 +73,13 @@ handleTitleChange = (event) => {
 }
 
 handleTotalTimeInMinutesChange = (event) => {
+    
     this.setState({totalTimeInMinutes: event.target.value});
 }
 
 handleSubmit =(event) => {
                             event.preventDefault(); 
-                            this.props.onCreate({ id: v4() , title:this.state.title , totalTimeInMinutes:this.state.totalTimeInMinutes});
+                            this.props.onCreate({ title:this.state.title , totalTimeInMinutes:this.state.totalTimeInMinutes});
                         
                            this.setState({title: "", totalTimeInMinutes: ""}); 
 
@@ -83,7 +88,7 @@ handleSubmit =(event) => {
 render () {
 return ( <form onSubmit={this.handleSubmit} className="TimeboxCreator">
         <label>Co robisz? <input value={this.state.title} onChange={this.handleTitleChange} type="text" /></label><br />
-        <label>Ile minut? <input value={this.state.totalTimeInMinutes} onChange={this.handleTotalTimeInMinutesChange} type="number" /></label><br />
+        <label>Ile minut? <input value={this.state.totalTimeInMinutes} onChange={this.handleTotalTimeInMinutesChange} type="number" step="0.01" /></label><br />
         <button>Dodaj TimeBox</button>
     </form>
     )}
@@ -91,4 +96,53 @@ return ( <form onSubmit={this.handleSubmit} className="TimeboxCreator">
 }
 
 
-export default TimeboxCreator;
+
+
+// KOMPONENT NIEKONTROLOWANY
+// nr 1 za pomocą formRef
+// class TimeboxCreator extends React.Component {
+    //     constructor(props) {
+        //       super(props);
+        //       this.formRef = React.createRef();
+        //     }
+        //     handleSubmit = (event) => {
+            //       event.preventDefault();
+            //       //console.log(this.formRef.current[0])
+            //       if (
+                //         this.formRef.current[0].value.length < 3 ||
+                //         this.formRef.current[1].value <= 0
+                //       )
+                //         return;
+                //       this.props.onCreate({
+                    //         id: uuid.v4(),
+                    //         title: this.formRef.current[0].value,
+                    //         totalTimeInMinutes: this.formRef.current[1].value,
+                    //       });
+                    //       this.formRef.current[0].value = "";
+                    //       this.formRef.current[1].value = "";
+                    //     };
+                    //     render() {
+                        //       const { isEditable } = this.props;
+                        //       return (
+                            //         <form
+                            //           onSubmit={this.handleSubmit}
+                            //           className={`TimeboxCreator ${!isEditable ? "" : "inactive"}`}
+                            //           ref={this.formRef}
+                            //         >
+                            //           <label>
+                            //             Co robisz?
+                            //             <input type="text" />
+//           </label>
+//           <br />
+//           <label>
+//             Ile minut?
+//             <input type="number" />
+//           </label>
+//           <br />
+//           <button>Dodaj Timebox</button>
+//         </form>
+//       );
+//     }
+//   }
+// 
+    export default TimeboxCreator;

@@ -1,16 +1,15 @@
 import React from 'react';
-import TimeboxEdition from './Timeboxedition';
 import PropTypes from 'prop-types';
 
-function Timebox ({timebox, onDelete,onUpdate, isEditable,handleEdit}) {
-    const {id, title, totalTimeInMinutes,isEdit} = timebox;
+function Timebox ({timebox, onDelete, isEditable,onEdit, onMakeCurrent}) {
+    const {title, totalTimeInMinutes} = timebox;
 
     Timebox.propTypes={
         timebox:PropTypes.object,
         isEditable:PropTypes.bool,
         onDelete:PropTypes.func.isRequired,
-        onUpdate:PropTypes.func.isRequired,
-        handleEdit:PropTypes.func.isRequired
+       
+        
         
     }
     
@@ -23,27 +22,27 @@ function Timebox ({timebox, onDelete,onUpdate, isEditable,handleEdit}) {
 
         //const {title, totalTimeInMinutes}=props;
         if (totalTimeInMinutes <= 0 ){
-            throw new Error("całkowity czas musi być większy niż zero");
+            // throw new Error("całkowity czas musi być większy niż zero");
         }
-        return (
+        return(
             <div className="Timebox">
-        { !isEdit ?(
-                <>
                 <h3>{title} - {totalTimeInMinutes} min. </h3>
                 <button disabled={isEditable} onClick={zorpoznanie}>Usuń</button>
-                <button disabled={isEditable} onClick={handleEdit}>Zmień</button>
-                </> 
-                ) : (
+                <button disabled={isEditable} onClick={onEdit}>Zmień</button>
+                <button disabled={isEditable} onClick={onMakeCurrent}>Zacznij teraz</button>
+                </div>  
+               ) 
+            }
+                
+                
+               
+ export default Timebox;
         
-                <TimeboxEdition id={id} title={title} totalTimeInMinutes={totalTimeInMinutes} handleEdit={handleEdit} onUpdate={onUpdate}/>
         
     
-                )}
-                </div>  
-            
-        )
+               
+       
+               
+       
         
-    }
 
-
-    export default Timebox;

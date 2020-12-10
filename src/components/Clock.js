@@ -15,7 +15,7 @@ function Clock ({className, minutes, seconds}) {
     return (
     <>
     <h2 className={"clock " + className}>Pozostało <span className="clock__minutes clock--italic">{minutes}</span><span className="clock__dwukropek">:</span><span className="clock__secunds clock--italic">{seconds}</span></h2>
-    {/* <RealTimeClock/> */}
+    <RealTimeClock/>
     </>
     )
 }
