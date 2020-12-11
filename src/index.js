@@ -126,7 +126,7 @@ return (<>
 ReactDOM.render(
 <>
 <Provider store={store}>
-<App /><App2/>
+<App/>
 </Provider>
 </>,
 document.getElementById("root"));
