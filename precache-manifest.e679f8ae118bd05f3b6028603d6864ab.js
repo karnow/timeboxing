@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "46fe4669e76e6bbb4c1768e4ffcbd062",
+    "revision": "cc06db1ceb0540ba71e1155d56d30955",
     "url": "/timeboxing/index.html"
   },
   {
-    "revision": "ab8eff31f36704f95bef",
+    "revision": "c8a69c949d58f32a2371",
     "url": "/timeboxing/static/css/main.ed90723b.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/timeboxing/static/js/4.7778b7e9.chunk.js"
   },
   {
-    "revision": "ab8eff31f36704f95bef",
-    "url": "/timeboxing/static/js/main.ec1dc7a4.chunk.js"
+    "revision": "c8a69c949d58f32a2371",
+    "url": "/timeboxing/static/js/main.ed89b63d.chunk.js"
   },
   {
     "revision": "9ab3ecefcfc4c8255097",
