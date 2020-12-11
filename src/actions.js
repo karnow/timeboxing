@@ -68,8 +68,9 @@ export const axiosAllTimeboxes = (accessToken) =>(dispatch)=>{
 }
 
 export const removeTimeboxRemontly =(timebox, accessToken)=> (dispatch) =>{
+    console.log(timebox);
     TimeboxesApi.removeTimebox(timebox, accessToken)
-            .then(()=>{ dispatch(removeTimebox(timebox))
+            .then((timebox)=>{ dispatch(removeTimebox(timebox))
                 console.log(timebox);
                 dispatch(addTimeboxFinished(timebox))}
                 ).catch((e) => console.log('Błąd :',e));

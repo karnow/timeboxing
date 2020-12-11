@@ -55,9 +55,11 @@ const FakeTimeboxesApi = {
         if (! timeboxToRemove) {
             throw new Error('cannot remove timebox without an id');
         }
-        const index = findIndexByAnId(timeboxToRemove);
-        timeboxes.splice(index, 1);
-        console.log('DELETE:', timeboxes)
+        // const index = findIndexByAnId(timeboxToRemove);
+        // console.log(index);
+        // timeboxes.splice(index, 1);
+        // console.log('DELETE:', timeboxes)
+        return (timeboxToRemove)
     },
     
 }
