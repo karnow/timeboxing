@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-
 import UserGreeting from './UserGreeting';
 
 function Header ({children}) {
-  // zliczanie przez react ilośc dzieci
-  if (React.Children.count(children)<1) {
+    if (React.Children.count(children)<1) {
     throw new Error ("Header har to have at least one child")
   }
 
@@ -25,7 +23,7 @@ function Header ({children}) {
 export default Header;
 
 
-/////POrtal przy użyciu komponentu
+/////Portal 
 
 function ModalText ({children}) {
 
@@ -35,8 +33,6 @@ return(
     </Portal>
 )
 }
-
-
 
 class Portal extends React.Component {
     constructor(props) {

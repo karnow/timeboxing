@@ -1,16 +1,6 @@
 
 import {combineReducers} from 'redux';
 
-// const initialState={
-//     currentTimeboxID:null,
-//     isEditable:false, 
-//     timeboxes:[],
-//     hasError:false,
-//     loading:true,
-//     error:null,
-//     currentlyEditedTimeboxId: null,
-    
-// }
 
 const initialState2= {
     searchQuery:"",
@@ -23,12 +13,6 @@ first: firstReducer,
 secound: secondReducer
 });
 
-// function secondReducer(state={}, action) {
-   
-//     return {
-//         searchQuery: searchReducer(state.searchQuery, action) 
-//     }
-// }
 
 function secondReducer(state=initialState2, action) {
     switch(action.type) {
@@ -67,29 +51,6 @@ function secondReducer(state=initialState2, action) {
 }
 
 
-// function secondReducer(state={}, action) {
-   
-//     return {
-//         searchQuery: searchReducer(state.searchQuery, action) 
-//     }
-// }
-
-// function searchReducer(state="", action) {
-//     switch(action.type) {
-
-//         case "CHANGE_SEARCH_QUERY":{
-//             const {searchQuery} =action;
-//             return searchQuery
-//         }
-        
-//         case "SEARCH_RESET": {
-//            return "";
-//         }
-//         default:
-//             return state;
-//         }
-// }
-
 
 function firstReducer (state={}, action) {
 
@@ -105,18 +66,7 @@ function firstReducer (state={}, action) {
 
     }
 }
-// function timeboxesFinishedReducer(state=[], action) {
-//     switch (action.type) {
-//         case "ADD_TIMEBOX_FINISHED": {
-//             const {timebox}=action;
-//             console.log(timebox);
-//             const timeboxesFinished = [...state, timebox]
-//             console.log(timeboxesFinished, "to ja reduktor timeboxesFinishedReducer");
-//             return timeboxesFinished;
-//         }
 
-//     }
-// }
 
 function currentyTimeboxIdReducer(state=null, action) {
     switch (action.type) {

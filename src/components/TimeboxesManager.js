@@ -1,6 +1,5 @@
 import React, {useContext, useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-// import uuid from 'uuid'; 
 import TimeboxCreator from './Timeboxcreator';
 import ErrorBoundaries from './Error';
 import SearchTimebox from './SearchTimebox';
@@ -13,9 +12,6 @@ import {axiosAllTimeboxes ,createTimeboxRemontly , removeTimeboxRemontly, onUpda
 import { EditableTimebox } from './EditableTimebox';
 
 
-
-
-
 function TimeboxesManager () {
 
 const dispatch =useDispatch();
@@ -25,51 +21,44 @@ const searchQuery=useSelector(state=>getSearchQuery(state));
 const timeboxesLoading=useSelector(state=> areTimeboxesLoading(state));
 const timeboxesLoadingError=useSelector(state=> getTimeboxesLoadingError(state));
 const getedFinishedTimboxes=useSelector(state=>getFinishedTimboxes(state));
-
 const hasError=useSelector(state=>hasErrorSelv(state));
-const state = useSelector(state=>state)
-console.log(state);
+//const state = useSelector(state=>state)
+
 useEffect(()=>{
 
 dispatch(axiosAllTimeboxes(accessToken))
 
-},[]) 
+},[]); 
 
 const handleCreate= (createdTimebox)=> dispatch(createTimeboxRemontly(createdTimebox,accessToken)) 
 
     
-   //poniżej użycie render props
-   const renderTimebox =(timebox,index)=>{
-    
+   //render props
+const renderTimebox =(timebox,index)=>{
 const onUpdate = (indexToUpdate, updateTimebox)=>dispatch(onUpdateRemontly(indexToUpdate, updateTimebox,accessToken));     
-       
 const onDelete= ()=> dispatch(removeTimeboxRemontly(timebox, accessToken));
-            
         
-       
-       return <EditableTimebox
-           
+       return <EditableTimebox           
             timebox={timebox}
             onUpdate={onUpdate}
             onDelete={onDelete}
             />
 
        }
-           
+            
+    //  function renderReadOnlyTimebox (timebox) {
        
-     function renderReadOnlyTimebox (timebox) {
-       
-       return (
-           <>
-          <strong>"Aktualny Edytowany Timebox"</strong> 
-       <ReadOnlyTimebox
-           key={timebox.id}
-           timebox={timebox}
+    //    return (
+    //        <>
+    //       <strong>"Aktualny Edytowany Timebox"</strong> 
+    //    <ReadOnlyTimebox
+    //        key={timebox.id}
+    //        timebox={timebox}
            
-            />
-           </>
-       )
-       }
+    //         />
+    //        </>
+    //    )
+    //    }
     
        
        return (

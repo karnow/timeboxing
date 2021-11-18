@@ -33,8 +33,6 @@ function ProgressBar({ className = "", percent=33, big=false,  color=null}) {
         
         ProgressBar.propTypes= {
             big: PropTypes.bool,
-            percent: PropTypes.number, 
-            percent: PropTypes.any, 
             percent: validRange,
             color: defaultColor
             

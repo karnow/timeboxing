@@ -3,7 +3,7 @@ import Clock from './Clock';
 import ProgressBar from './Progressbar';
 import {getMinutesAndSecoundsFromDurationInSecounds} from "../lib/time";
 import { getCurrentTimebox } from '../reducers';
-import {finishCurrentTimebox, addTimeboxFinished} from '../actions';
+import {finishCurrentTimebox} from '../actions';
 
 import { connect } from 'react-redux';
 
@@ -46,11 +46,9 @@ componentWillUnmount(){
 }
     
 handleStart(event) {
-//    const {karol}=this.state;
-//     console.log(karol);
     this.setState({
         isRunning:true
-        //elpsedTimeInSecounds : 15*60 + 25
+        
     })
     this.startTimer();
 }
@@ -93,8 +91,7 @@ handleStop(event) {
     }
 
     togglePause() {
-       
-        //this.setState({isPaused: !this.state.isPaused}) 
+               
         this.setState(
             function (prevState){
                 

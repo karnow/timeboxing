@@ -1,7 +1,4 @@
-
-
 import React from 'react';
-// import { render } from 'node-sass';
 
 function Clock ({className, minutes, seconds}) {
 
@@ -59,10 +56,5 @@ render(){
         )
     }
     }
-
-
-   
-
-
 
 export default Clock;

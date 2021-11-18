@@ -46,15 +46,11 @@ export const searchTimeboxResult = (event,accessToken) =>(dispatch, getState) =>
 }
 // akcja resetu timeboxów i kopiowanie timebox'w z kopi do stanu
 export const resetSearchAndCopiesTimeboxes = () =>(dispatch, getState) => {
-    
-              
+          
     dispatch(resetSearch(getCopiTimeboxes(getState())));
     dispatch(resetTimeboxesCopi());
     
 }
-
-
-
 
 export const axiosAllTimeboxes = (accessToken) =>(dispatch)=>{
     TimeboxesApi.getAllTimeboxes(accessToken)
