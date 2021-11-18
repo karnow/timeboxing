@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.65da3415.chunk.css",
-    "main.js": "/static/js/main.2f4f4229.chunk.js",
-    "main.js.map": "/static/js/main.2f4f4229.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.431f4230.js",
-    "runtime-main.js.map": "/static/js/runtime-main.431f4230.js.map",
-    "static/js/2.68b9322c.chunk.js": "/static/js/2.68b9322c.chunk.js",
-    "static/js/2.68b9322c.chunk.js.map": "/static/js/2.68b9322c.chunk.js.map",
-    "static/js/3.fb1d6d7e.chunk.js": "/static/js/3.fb1d6d7e.chunk.js",
-    "static/js/3.fb1d6d7e.chunk.js.map": "/static/js/3.fb1d6d7e.chunk.js.map",
-    "static/js/4.cb754aa4.chunk.js": "/static/js/4.cb754aa4.chunk.js",
-    "static/js/4.cb754aa4.chunk.js.map": "/static/js/4.cb754aa4.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.8c73c5fdac767a6d17fac3ddaebecf17.js": "/precache-manifest.8c73c5fdac767a6d17fac3ddaebecf17.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.65da3415.chunk.css.map": "/static/css/main.65da3415.chunk.css.map",
-    "static/js/2.68b9322c.chunk.js.LICENSE.txt": "/static/js/2.68b9322c.chunk.js.LICENSE.txt",
-    "static/js/3.fb1d6d7e.chunk.js.LICENSE.txt": "/static/js/3.fb1d6d7e.chunk.js.LICENSE.txt"
+    "main.css": "/timeboxing/static/css/main.65da3415.chunk.css",
+    "main.js": "/timeboxing/static/js/main.d02d2742.chunk.js",
+    "main.js.map": "/timeboxing/static/js/main.d02d2742.chunk.js.map",
+    "runtime-main.js": "/timeboxing/static/js/runtime-main.dbcc6cda.js",
+    "runtime-main.js.map": "/timeboxing/static/js/runtime-main.dbcc6cda.js.map",
+    "static/js/2.68b9322c.chunk.js": "/timeboxing/static/js/2.68b9322c.chunk.js",
+    "static/js/2.68b9322c.chunk.js.map": "/timeboxing/static/js/2.68b9322c.chunk.js.map",
+    "static/js/3.9f1baaf9.chunk.js": "/timeboxing/static/js/3.9f1baaf9.chunk.js",
+    "static/js/3.9f1baaf9.chunk.js.map": "/timeboxing/static/js/3.9f1baaf9.chunk.js.map",
+    "static/js/4.4c24e577.chunk.js": "/timeboxing/static/js/4.4c24e577.chunk.js",
+    "static/js/4.4c24e577.chunk.js.map": "/timeboxing/static/js/4.4c24e577.chunk.js.map",
+    "index.html": "/timeboxing/index.html",
+    "precache-manifest.21683a4172055c345c616aac94636b39.js": "/timeboxing/precache-manifest.21683a4172055c345c616aac94636b39.js",
+    "service-worker.js": "/timeboxing/service-worker.js",
+    "static/css/main.65da3415.chunk.css.map": "/timeboxing/static/css/main.65da3415.chunk.css.map",
+    "static/js/2.68b9322c.chunk.js.LICENSE.txt": "/timeboxing/static/js/2.68b9322c.chunk.js.LICENSE.txt",
+    "static/js/3.9f1baaf9.chunk.js.LICENSE.txt": "/timeboxing/static/js/3.9f1baaf9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.431f4230.js",
+    "static/js/runtime-main.dbcc6cda.js",
     "static/js/2.68b9322c.chunk.js",
     "static/css/main.65da3415.chunk.css",
-    "static/js/main.2f4f4229.chunk.js"
+    "static/js/main.d02d2742.chunk.js"
   ]
 }
